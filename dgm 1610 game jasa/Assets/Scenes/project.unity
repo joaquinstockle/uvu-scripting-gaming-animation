@@ -5118,6 +5118,7 @@ GameObject:
   - component: {fileID: 1404687266}
   - component: {fileID: 1404687265}
   - component: {fileID: 1404687269}
+  - component: {fileID: 1404687270}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -5207,6 +5208,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1404687270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1404687264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd72bc82f4ab444e8c976c75b230d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 0
+  JumpHeight: 15
 --- !u!1 &1955060169
 GameObject:
   m_ObjectHideFlags: 0

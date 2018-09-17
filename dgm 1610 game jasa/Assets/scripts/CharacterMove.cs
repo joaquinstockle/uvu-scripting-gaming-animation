@@ -19,7 +19,7 @@ public class CharacterMove : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-		Grounded = Physics2D.OverlapCircle(GroundCheck.posotion, GroundCheckRadius, WhatIsGround);
+		Grounded = Physics2D.OverlapCircle(GroundCheck.position, GroundCheckRadius, WhatIsGround);
 	}
 	// Update is called once per frame
 	void Update () {
@@ -28,9 +28,17 @@ public class CharacterMove : MonoBehaviour {
 		if(Input.GetKeyDown (KeyCode.Space)&& Grounded){
 			Jump();
 		}
+		// This cod makes the character move from side to side using the A&D keys.
+		if(Input.GetKey (KeyCode.D)){
+			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+		}
+
+		if(Input.GetKey (KeyCode.A)){
+			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+		}
 	}
 
 	public void Jump(){
-		GetComponent<Rigidbody2D>().velocity + new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
+		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
 	}
 }

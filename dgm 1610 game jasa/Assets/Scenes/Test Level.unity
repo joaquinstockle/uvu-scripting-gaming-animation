@@ -124,7 +124,7 @@ GameObject:
   m_Layer: 0
   m_Name: EdgeCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -135,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 87177400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.085, z: 0}
+  m_LocalPosition: {x: -0.081, y: -0.093, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1758803781}
@@ -4882,7 +4882,7 @@ GameObject:
   - component: {fileID: 954783008}
   - component: {fileID: 954783007}
   - component: {fileID: 954783009}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5098,7 +5098,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.143, y: 0.16}
+  m_Size: {x: 0.15, y: 0.16}
   m_EdgeRadius: 0
 --- !u!212 &1040738807
 SpriteRenderer:
@@ -5153,7 +5153,7 @@ Transform:
   m_GameObject: {fileID: 1040738805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.02, y: -4.73, z: 0.094457604}
-  m_LocalScale: {x: 98.92804, y: 2.8394487, z: 1.0765685}
+  m_LocalScale: {x: 98.92804, y: 2.8394487, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -5219,7 +5219,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1053060497}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.97, y: -2.71, z: 0.015479549}
+  m_LocalPosition: {x: -6.69, y: -2.59, z: 0.015479549}
   m_LocalScale: {x: 0.7968475, y: 0.7968474, z: 0.7968474}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5430,7 +5430,7 @@ GameObject:
   m_Layer: 0
   m_Name: WallCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5441,7 +5441,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1423671781}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.069, y: 0.001, z: 0}
+  m_LocalPosition: {x: -0.086, y: 0.001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1758803781}
@@ -5523,7 +5523,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1530554158
 RectTransform:
@@ -5868,6 +5868,7 @@ GameObject:
   - component: {fileID: 1758803778}
   - component: {fileID: 1758803777}
   - component: {fileID: 1758803776}
+  - component: {fileID: 1758803782}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -5886,10 +5887,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41aa6148f09d04f4f9fdcda78e8cd2e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 4
+  MoveSpeed: 2
   MoveRight: 1
   WallCheck: {fileID: 1423671782}
-  WallCheckRadius: 0.1
+  WallCheckRadius: 0.2
   WhatIsWall:
     serializedVersion: 2
     m_Bits: 768
@@ -6024,6 +6025,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1758803782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1758803775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4237d5b1782a572488424e914836484d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelManager: {fileID: 0}
 --- !u!1 &1863494187
 GameObject:
   m_ObjectHideFlags: 0
@@ -6035,7 +6048,7 @@ GameObject:
   m_Layer: 0
   m_Name: CheckPoint(0)
   m_TagString: Untagged
-  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6171,7 +6184,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40

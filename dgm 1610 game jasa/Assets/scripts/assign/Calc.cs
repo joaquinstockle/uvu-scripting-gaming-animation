@@ -19,6 +19,8 @@ public class Calc : MonoBehaviour {
 
 		Total = one + two;
 
+		// Debug "Total"
+
 	}
 
 	

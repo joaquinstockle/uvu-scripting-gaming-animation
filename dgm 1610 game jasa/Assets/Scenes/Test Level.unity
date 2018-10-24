@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 538185109}
   - component: {fileID: 538185110}
   - component: {fileID: 538185111}
+  - component: {fileID: 538185112}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -255,6 +256,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Abc: party
+--- !u!114 &538185112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 538185106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd43c6b0c75b62d4cb5488a556125330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Num: 40
 --- !u!1 &790205166
 GameObject:
   m_ObjectHideFlags: 0
@@ -4884,7 +4897,7 @@ GameObject:
   - component: {fileID: 861712948}
   - component: {fileID: 861712947}
   - component: {fileID: 861712951}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4905,7 +4918,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4978,7 +4991,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 861712946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.38, y: 2.26, z: 0.0058594}
+  m_LocalPosition: {x: -20.46, y: -7.24, z: 0.0058594}
   m_LocalScale: {x: 1.6291223, y: 1.6291218, z: 1.6291218}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6081,7 +6094,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18, y: 0.18}
+  m_Size: {x: 0.18, y: 0.13}
   m_EdgeRadius: 0
 --- !u!61 &1758803779
 BoxCollider2D:
@@ -6219,7 +6232,7 @@ GameObject:
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

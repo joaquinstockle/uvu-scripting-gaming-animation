@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 538185111}
   - component: {fileID: 538185112}
   - component: {fileID: 538185113}
+  - component: {fileID: 538185114}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -282,6 +283,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num: 2
   name: Jason
+--- !u!114 &538185114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 538185106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1c0cb99ed05734f8827e5d00b6d4b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Eggs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Jedi: []
 --- !u!1 &790205166
 GameObject:
   m_ObjectHideFlags: 0
@@ -4932,7 +4946,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -5391,6 +5405,7 @@ GameObject:
   - component: {fileID: 1242096950}
   - component: {fileID: 1242096949}
   - component: {fileID: 1242096948}
+  - component: {fileID: 1242096952}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5455,12 +5470,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1242096947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -8.515276}
-  m_LocalScale: {x: 0.16871223, y: 0.16871192, z: 0.8435595}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1.0122733, y: 1.0122715, z: 1}
   m_Children: []
-  m_Father: {fileID: 1674768875}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1242096952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1242096947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff61eda34261254ca62752e300f89ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PC: {fileID: 1674768877}
+  isfollowing: 0
+  xOffset: 0
+  yOffset: 0
 --- !u!1 &1252646459
 GameObject:
   m_ObjectHideFlags: 0
@@ -5855,10 +5885,9 @@ Transform:
   m_GameObject: {fileID: 1674768871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.094457604}
-  m_LocalScale: {x: 5.927253, y: 5.9272637, z: 1.1854528}
+  m_LocalScale: {x: 6, y: 6, z: 1.1854528}
   m_Children:
   - {fileID: 520380743}
-  - {fileID: 1242096951}
   - {fileID: 1947149362}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -6261,7 +6290,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1674768875}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2065404475
 GameObject:

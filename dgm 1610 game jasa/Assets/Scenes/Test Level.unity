@@ -141,6 +141,53 @@ Transform:
   m_Father: {fileID: 1758803781}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &462393600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 462393602}
+  - component: {fileID: 462393601}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &462393601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 462393600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4acf6d607f283468517fc2ff31941e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCheckpoint: {fileID: 1863494187}
+  Player: {fileID: 1674768872}
+  PC2: {fileID: 1674768871}
+  DeathParticle: {fileID: 790205166}
+  RespawnParticle: {fileID: 790205166}
+  RespawnDelay: 1
+  PointPenaltyOnDeath: 10
+--- !u!4 &462393602
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 462393600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.38, y: -1.76, z: 0.06566128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &520380742
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +231,8 @@ GameObject:
   - component: {fileID: 538185112}
   - component: {fileID: 538185113}
   - component: {fileID: 538185114}
+  - component: {fileID: 538185116}
+  - component: {fileID: 538185115}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -296,6 +345,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eggs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   Jedi: []
+--- !u!114 &538185115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 538185106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0ec80d59af27a45b1eeb65ab481eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &538185116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 538185106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a852590cccc5b3143b48fddcd1f95583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cats: []
 --- !u!1 &790205166
 GameObject:
   m_ObjectHideFlags: 0
@@ -5778,7 +5850,6 @@ GameObject:
   - component: {fileID: 1674768873}
   - component: {fileID: 1674768872}
   - component: {fileID: 1674768877}
-  - component: {fileID: 1674768876}
   - component: {fileID: 1674768878}
   m_Layer: 0
   m_Name: PC
@@ -5892,23 +5963,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1674768876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1674768871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d4acf6d607f283468517fc2ff31941e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentCheckpoint: {fileID: 1863494187}
-  Player: {fileID: 1674768872}
-  DeathParticle: {fileID: 790205166}
-  RespawnParticle: {fileID: 790205166}
-  RespawnDelay: 1
-  PointPenaltyOnDeath: 10
 --- !u!114 &1674768877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6137,7 +6191,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18, y: 0.13}
+  m_Size: {x: 0.18, y: 0.12}
   m_EdgeRadius: 0
 --- !u!61 &1758803779
 BoxCollider2D:

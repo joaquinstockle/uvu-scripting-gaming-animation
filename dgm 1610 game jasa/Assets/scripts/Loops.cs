@@ -1,10 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Loops : MonoBehaviour {
 
 	public int Num = 40;
+
+	public string Color = "Blue";
 
 
 
@@ -16,6 +18,7 @@ public class Loops : MonoBehaviour {
 			Num --;
 
 		}
+
 	}
 	
 	// Update is called once per frame

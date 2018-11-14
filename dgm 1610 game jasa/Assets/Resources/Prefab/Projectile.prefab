@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58610310912892306}
   - component: {fileID: 50907316043986680}
   - component: {fileID: 114170363639490622}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fa82faa4da52b4dbf7c70048d48e8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 5
   PC: {fileID: 0}
   EnemyDeath: {fileID: 0}
   ProjectileParticle: {fileID: 0}

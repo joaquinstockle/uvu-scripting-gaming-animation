@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour {
 
@@ -11,6 +12,11 @@ public class ScoreManager : MonoBehaviour {
 	public Text WinText;
 
 	Text ScoreText;
+
+	void Awake(){
+			Time.timeScale = 1;
+
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -31,12 +37,12 @@ public class ScoreManager : MonoBehaviour {
 		if(Score >= WinScore ){
 			print("Win Score Reached = " + Score);
 			WinText.GetComponent<Text>().enabled = true;
-			Time.timescale = 0;
+			Time.timeScale = 0;
 		}
 
 		//If player hits the escape key return to start menu
 		if(Input.GetKeyDown(KeyCode.Escape)){
-			SceneManager.LocalScene(0);
+			SceneManager.LoadScene(0);
 		}
 	}
 

@@ -6,6 +6,10 @@ public class PlayerShoot : MonoBehaviour {
 
 	public Transform FirePoint;
 	public GameObject Projectile;
+	public bool NotEmpty;
+
+	//Checks
+	
 
 	// Use this for initialization
 	void Start () {
@@ -15,8 +19,13 @@ public class PlayerShoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.RightControl))
+		if(Input.GetKeyDown(KeyCode.RightControl)&& NotEmpty)
 			Instantiate(Projectile,FirePoint.position, FirePoint.rotation);
 		
+		if(AmmoManager.Ammo <= 0)
+			NotEmpty = false;
+
+		if(AmmoManager.Ammo > 0)
+			NotEmpty = true;
 	}
 }

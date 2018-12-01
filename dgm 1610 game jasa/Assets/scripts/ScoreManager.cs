@@ -13,10 +13,10 @@ public class ScoreManager : MonoBehaviour {
 
 	Text ScoreText;
 
-	// void Awake(){
-	// 		Time.timeScale = 1;
+	void Awake(){
+			Time.timeScale = 1;
 
-	// }
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -33,17 +33,17 @@ public class ScoreManager : MonoBehaviour {
 			Score = 0;
 		ScoreText.text = " " + Score;	
 
-		// //if the player win display win text
-		// if(Score >= WinScore ){
-		// 	print("Win Score Reached = " + Score);
-		// 	WinText.GetComponent<Text>().enabled = true;
-		// 	Time.timeScale = 0;
-		// }
+		//if the player win display win text
+		if(Score >= WinScore ){
+			print("Win Score Reached = " + Score);
+			WinText.GetComponent<Text>().enabled = true;
+			Time.timeScale = 0;
+		}
 
-		// //If player hits the escape key return to start menu
-		// if(Input.GetKeyDown(KeyCode.Escape)){
-		// 	SceneManager.LoadScene(0);
-		// }
+		//If player hits the escape key return to start menu
+		if(Input.GetKeyDown(KeyCode.Escape)){
+			SceneManager.LoadScene(0);
+		}
 	}
 
 	public static void Addpoints (int PointToAdd) {

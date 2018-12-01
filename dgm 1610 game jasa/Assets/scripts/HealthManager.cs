@@ -6,14 +6,20 @@ using UnityEngine.UI;
 public class HealthManager : MonoBehaviour {
 
 	public static int Health;
-
+	public LevelManager LevelManager;
+	public bool Dead;
+	
 	Text HealthText;
 
+	
 	// Use this for initialization
 	void Start () {
 		HealthText = GetComponent<Text>();
 
 		Health = 100;
+		
+		LevelManager = FindObjectOfType <LevelManager>();
+		
 		
 	}
 	
@@ -25,9 +31,27 @@ public class HealthManager : MonoBehaviour {
 			Health = 100;
 		HealthText.text = " " + Health;	
 
+		if(Health <= 0)
+			Dead = true;
+		if(Health > 0)
+			Dead = false;
+		
+		if(Dead){
+
+			LevelManager.RespawnPlayer();
+			Health = 100;
+		}
+
 	}
+
+	
+	
+	
 
 	public static void Addpoints (int PointToAdd) {
 		Health += PointToAdd;
 	}
+
+
+		
 }

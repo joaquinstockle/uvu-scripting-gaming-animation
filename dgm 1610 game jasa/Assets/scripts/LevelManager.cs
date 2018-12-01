@@ -58,6 +58,8 @@ public class LevelManager : MonoBehaviour {
 		Player.GetComponent<Renderer>().enabled = true;
 		//Spawn Partical
 		Instantiate (RespawnParticle, CurrentCheckpoint.transform.position, CurrentCheckpoint.transform.rotation);
+	
+		
 
 	}
 }

@@ -13,7 +13,7 @@ public class AmmoManager : MonoBehaviour {
 	void Start () {
 		AmmoText = GetComponent<Text>();
 
-		Ammo = 0;
+		Ammo = 10;
 		
 	}
 	

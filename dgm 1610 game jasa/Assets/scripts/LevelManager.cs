@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour {
 	public Rigidbody2D Player;
 	public GameObject PC2;
 
+	
 	// Particles
 	public GameObject DeathParticle;
 	public GameObject RespawnParticle;
@@ -24,8 +25,11 @@ public class LevelManager : MonoBehaviour {
 	//Use This For Initialization
 	void Start () {
 		// Player = FindObjectOfType<Rigidbody2D> ();
+
 	
 	}
+
+
 
 	public void RespawnPlayer(){
 		StartCoroutine ("RespawnPlayerCo");

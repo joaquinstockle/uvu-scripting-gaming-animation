@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class NewCheckpoint : MonoBehaviour {
 
-	public LevelManager CurrentCheckpoint;
-	public GameObject PC;
+	public Rigidbody2D CC;
+	public GameObject NC1;
 
-	// void OnTriggerEnter2D (Collider2D other){
-
-	// 	if(other.tag == "PC")
-	// 		LevelManager.CurrentCheckpoint();
-	// }
-
+	void OnTriggerEnter2D (Collider2D other) {
+		if(other.name == "PC"){
+			CC.transform.position = NC1.transform.position;
+		}
+	}		
 }

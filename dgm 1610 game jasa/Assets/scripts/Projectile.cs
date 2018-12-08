@@ -55,13 +55,13 @@ public class Projectile : MonoBehaviour {
 		Destroy (gameObject);
 	}
 
-	// void OnCollisionEnter2D(Collision2D other){
+	void OnCollisionEnter2D(Collision2D other){
 		
-	// 	Instantiate(ProjectileParticle, transform.position, transform.rotation);
-	// 	Destroy (gameObject);
+		Instantiate(ProjectileParticle, transform.position, transform.rotation);
+		Destroy (gameObject);
 
 		
 			
-	// }
+	}
 
 }
